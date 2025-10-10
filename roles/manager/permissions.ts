@@ -8,7 +8,6 @@ const { ethereumGeneralAdapter1 } = contracts.eth.morpho;
 
 const morphoChainlinkOracleV2 = "0x6bac818df5654ea824ce723de51d7c7d9fd2f4ff";
 const adaptiveCurveIrm = "0x870ac11d48b15db9a138cf899d20f13f79ba00bc";
-const lltv = "860000000000000000";
 
 const marketParamsScoping = {
   collateralToken: wbravUSDC,
