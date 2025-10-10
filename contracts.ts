@@ -1,10 +1,10 @@
 import type { Contracts } from "./.lib/types";
 
 export default {
-  mainnet: {
-    weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    uniswap: {
-      positions_nft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+  eth: {
+    morpho: {
+      morpho: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+      ethereumGeneralAdapter1: "0x4A6c312ec70E8747a587EE860a0353cd42Be0aE0", // extends GeneralAdapter1
     },
   },
-} satisfies Contracts;
+} as const satisfies Contracts;
