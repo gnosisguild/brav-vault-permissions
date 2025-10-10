@@ -44,6 +44,7 @@ export default [
   ),
 
   // repay USDC
+  ...allowErc20Approve([usdc], ethereumGeneralAdapter1),
   allow.eth.morpho.ethereumGeneralAdapter1.morphoRepay(
     marketParamsScoping,
     undefined, // assets
