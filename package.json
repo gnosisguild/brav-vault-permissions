@@ -6,7 +6,8 @@
   },
   "scripts": {
     "setup": "eth-sdk -p ./.lib/eth-sdk",
-    "apply": "rimraf build && tsc && node build/.lib/scripts/apply.js defaulManagerRole eth:0x875b9538bd7b79dd6599f74ca1e2e1987d241b6e"
+    "apply": "rimraf build && tsc && node build/.lib/scripts/apply.js defaulManagerRole eth:0x875b9538bd7b79dd6599f74ca1e2e1987d241b6e",
+    "registerBundler3Unwrapper": "rimraf build && tsc && node build/.lib/scripts/registerBundler3Unwrapper.js eth:0x875b9538bd7b79dd6599f74ca1e2e1987d241b6e"
   },
   "dependencies": {
     "@gnosis-guild/eth-sdk": "^0.4.0",
