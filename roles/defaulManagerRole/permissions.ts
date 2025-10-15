@@ -1,8 +1,9 @@
 import contracts from "../../contracts";
 import { allowErc20Approve } from "../../helpers";
 
-const wbravUSDC = "0x7309E1E2e74af170c69bdE8FCB30397f8697D5FF";
 const usdc = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48";
+const bravUSDC = "0x9f96E4B65059b0398B922792d3fF9F10B4567533";
+const wbravUSDC = "0x7309E1E2e74af170c69bdE8FCB30397f8697D5FF";
 
 const { ethereumGeneralAdapter1 } = contracts.eth.morpho;
 
@@ -18,6 +19,19 @@ const marketParamsScoping = {
 };
 
 export default [
+  ///// BRACKET PERMISSIONS /////
+
+  // deposit usdc to bravUSDC
+  allowErc20Approve([usdc], bravUSDC),
+  allow.eth.bracket.bravUSDC.deposit(undefined, c.avatar),
+
+  // wrap/unwrap bravUSDC
+  allowErc20Approve([bravUSDC], wbravUSDC),
+  allow.eth.bracket.wbravUSDC.wrap(undefined),
+  allow.eth.bracket.wbravUSDC.unwrap(undefined),
+
+  ///// MORPHO PERMISSIONS /////
+
   // authorize ethereumGeneralAdapter1
   allow.eth.morpho.morpho.setAuthorization(ethereumGeneralAdapter1, true),
 

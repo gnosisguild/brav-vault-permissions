@@ -6,7 +6,7 @@
   },
   "scripts": {
     "setup": "eth-sdk -p ./.lib/eth-sdk",
-    "apply": "rimraf build && tsc && node build/.lib/scripts/apply.js"
+    "apply": "rimraf build && tsc && node build/.lib/scripts/apply.js defaulManagerRole eth:0x875b9538bd7b79dd6599f74ca1e2e1987d241b6e"
   },
   "dependencies": {
     "@gnosis-guild/eth-sdk": "^0.4.0",
@@ -22,7 +22,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.6.3",
     "yargs": "^17.7.2",
-    "zodiac-roles-sdk": "^3.0.1"
+    "zodiac-roles-sdk": "^3.3.0"
   },
   "packageManager": "yarn@1.22.19+sha512.ff4579ab459bb25aa7c0ff75b62acebe576f6084b36aa842971cf250a5d8c6cd3bc9420b22ce63c7f93a0857bc6ef29291db39c3e7a23aab5adfd5a4dd6c5d71"
 }
