@@ -43,7 +43,7 @@ export default [
   ),
   allow.eth.morpho.ethereumGeneralAdapter1.morphoSupplyCollateral(
     marketParamsScoping,
-    undefined, // all any amount
+    undefined, // allow any amount
     c.avatar, // onBehalfOf must be the avatar
     "0x", // data
   ),
