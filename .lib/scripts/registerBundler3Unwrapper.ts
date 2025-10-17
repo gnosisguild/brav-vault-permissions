@@ -7,7 +7,7 @@ import { chains, fetchRolesMod } from "zodiac-roles-sdk";
 
 type ChainId = keyof typeof addresses;
 
-const MORPHO_BUNDLER3_UNWRAPPER = "0x9cAfcC440a748000283aF4014818BaB12A072c95";
+const MORPHO_BUNDLER3_UNWRAPPER = "0x7533922A155DC6b4Cc0ae4E74D70a73bc86dD3E8";
 const MULTICALL_SELECTOR = "0x374f435d";
 
 export const registerBundler3Unwrapper = (
