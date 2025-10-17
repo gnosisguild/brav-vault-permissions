@@ -11,8 +11,8 @@ const morphoChainlinkOracleV2 = "0x6bac818df5654ea824ce723de51d7c7d9fd2f4ff";
 const adaptiveCurveIrm = "0x870ac11d48b15db9a138cf899d20f13f79ba00bc";
 
 const marketParamsScoping = {
-  collateralToken: wbravUSDC,
   loanToken: usdc,
+  collateralToken: wbravUSDC,
   oracle: morphoChainlinkOracleV2,
   irm: adaptiveCurveIrm,
   // do we wanna set a max limit on lltv?
@@ -59,6 +59,10 @@ export default [
 
   // repay USDC
   ...allowErc20Approve([usdc], ethereumGeneralAdapter1),
+  allow.eth.morpho.ethereumGeneralAdapter1.erc20TransferFrom(
+    usdc,
+    ethereumGeneralAdapter1,
+  ),
   allow.eth.morpho.ethereumGeneralAdapter1.morphoRepay(
     marketParamsScoping,
     undefined, // assets
