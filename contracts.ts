@@ -10,5 +10,6 @@ export default {
       morpho: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
       ethereumGeneralAdapter1: "0x4A6c312ec70E8747a587EE860a0353cd42Be0aE0", // extends GeneralAdapter1
     },
+    usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
   },
 } as const satisfies Contracts;

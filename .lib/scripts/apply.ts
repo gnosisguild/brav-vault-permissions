@@ -17,6 +17,8 @@ import {
 import { Permissions } from "../types";
 import "../globals";
 
+const ROLE_KEY = "defaulManagerRole";
+
 /**
  * Posts permission to Zodiac Roles app for storage
  * @returns The hash under which permissions have been stored
@@ -56,7 +58,7 @@ async function main() {
     .positional("role", {
       demandOption: true,
       describe:
-        "The role key, i.e., the name of the folder with configuration to apply",
+        "The role folder name, i.e., the name of the folder with configuration to apply",
       type: "string",
     })
     .positional("mod", {
@@ -85,7 +87,7 @@ async function main() {
   const hash = await post(permissions, members);
   console.log(`Permissions posted under hash: ${hash}`);
 
-  const diffUrl = `${ZODIAC_ROLES_APP}/${modArg}/roles/${roleArg}/diff/${hash}`;
+  const diffUrl = `${ZODIAC_ROLES_APP}/${modArg}/roles/${ROLE_KEY}/diff/${hash}`;
   console.log("Preparing diff view...");
   await fetch(diffUrl);
 
