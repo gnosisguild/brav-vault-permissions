@@ -24,6 +24,7 @@ export default [
   // deposit usdc to bravUSDC
   allowErc20Approve([usdc], bravUSDC),
   allow.eth.bracket.bravUSDC.deposit(undefined, c.avatar),
+  allow.eth.bracket.bravUSDC.withdraw(),
 
   // wrap/unwrap bravUSDC
   allowErc20Approve([bravUSDC], wbravUSDC),
