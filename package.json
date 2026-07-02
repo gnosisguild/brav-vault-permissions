@@ -6,10 +6,10 @@
   },
   "scripts": {
     "setup": "eth-sdk -p ./.lib/eth-sdk",
-    "brav:apply": "rimraf build && tsc && node build/.lib/scripts/apply.js brav eth:0x7B146b2E72fbbE5Fc0eF7Fa9920Bf1eb2610f600",
+    "brav:apply": "rimraf build && tsc && node build/.lib/scripts/applyLegacy.js brav eth:0x7B146b2E72fbbE5Fc0eF7Fa9920Bf1eb2610f600",
     "brav:registerBundler3Unwrapper": "rimraf build && tsc && node build/.lib/scripts/registerBundler3Unwrapper.js eth:0x7B146b2E72fbbE5Fc0eF7Fa9920Bf1eb2610f600",
-    "boreal:apply": "rimraf build && tsc && node build/.lib/scripts/apply.js boreal eth:0x875B9538bD7b79dD6599F74Ca1e2E1987D241B6e",
-    "provecto:apply": "rimraf build && tsc && node build/.lib/scripts/apply.js provecto eth:0x5e03b47f5F7B2A3c16Aca31155DA8A20a82745E8"
+    "boreal:apply": "rimraf build && tsc && node build/.lib/scripts/applyLegacy.js boreal eth:0x875B9538bD7b79dD6599F74Ca1e2E1987D241B6e",
+    "provecto:apply": "rimraf build && tsc && node build/.lib/scripts/applyLegacy.js provecto eth:0x5e03b47f5F7B2A3c16Aca31155DA8A20a82745E8"
   },
   "dependencies": {
     "@gnosis-guild/eth-sdk": "^0.4.0",
@@ -17,7 +17,9 @@
     "@safe-global/api-kit": "^2.3.0",
     "@types/node": "^20.12.7",
     "@types/yargs": "^17.0.33",
-    "defi-kit": "^2.17.0",
+    "@zodiac-os/sdk": "^1.11.2",
+    "defi-kit": "^2.26.10",
+    "dotenv": "^17.0.0",
     "ethers": "^6.13.4",
     "open": "^8.4.2",
     "prettier": "^3.0.0",
@@ -25,7 +27,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.6.3",
     "yargs": "^17.7.2",
-    "zodiac-roles-sdk": "^3.3.0"
+    "zodiac-roles-sdk": "^4.0.0"
   },
   "packageManager": "yarn@1.22.19+sha512.ff4579ab459bb25aa7c0ff75b62acebe576f6084b36aa842971cf250a5d8c6cd3bc9420b22ce63c7f93a0857bc6ef29291db39c3e7a23aab5adfd5a4dd6c5d71"
 }

@@ -3,7 +3,7 @@ import { Contract, getAddress, Interface } from "ethers";
 import { addresses } from "../../morphoAddresses";
 import yargs from "yargs";
 import assert from "assert";
-import { chains, fetchRolesMod } from "zodiac-roles-sdk";
+import { chains } from "zodiac-roles-sdk";
 
 type ChainId = keyof typeof addresses;
 
